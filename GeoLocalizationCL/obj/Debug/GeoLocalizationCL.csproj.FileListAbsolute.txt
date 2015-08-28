@@ -1,0 +1,10 @@
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\GeoLocalizationCL.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\GeoLocalizationCL.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\obj\Debug\GeoLocalizationCL.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\obj\Debug\GeoLocalizationCL.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\GeoLocalizationCL.dll.config
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\log4net-loggly.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\log4net.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\Newtonsoft.Json.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\log4net.xml
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\Newtonsoft.Json.xml

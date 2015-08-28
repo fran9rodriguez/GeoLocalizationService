@@ -1,0 +1,11 @@
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\GeoLocalizationBL.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\GeoLocalizationBL.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\obj\Debug\GeoLocalizationBL.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\obj\Debug\GeoLocalizationBL.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\GeoLocalizationDL.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\GeoLocalizationDL.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\obj\Debug\GeoLocalizationBL.csprojResolveAssemblyReference.cache
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\GeoLocalizationCL.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\GeoLocalizationCL.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\log4net.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\log4net.xml

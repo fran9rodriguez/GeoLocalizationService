@@ -1,0 +1,16 @@
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\obj\Debug\GeoLocalizationWS.csprojResolveAssemblyReference.cache
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\GeoLocalizationWS.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\GeoLocalizationWS.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\GeoLocalizationBL.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\GeoLocalizationCL.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\GeoLocalizationDL.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\GeoLocalizationBL.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\GeoLocalizationCL.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\GeoLocalizationDL.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\obj\Debug\GeoLocalizationWS.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\obj\Debug\GeoLocalizationWS.pdb
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\log4net-loggly.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\log4net.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\Newtonsoft.Json.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\log4net.xml
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\Newtonsoft.Json.xml
