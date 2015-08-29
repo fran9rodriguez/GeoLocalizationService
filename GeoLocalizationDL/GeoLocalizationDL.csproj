@@ -68,6 +68,7 @@
     <None Include="Data\locations.csv" />
     <None Include="Data\locationsBig.csv" />
     <None Include="Data\locationsMedium.csv" />
+    <None Include="Data\locationsSmall.csv" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

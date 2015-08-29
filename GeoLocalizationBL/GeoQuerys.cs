@@ -20,6 +20,7 @@ namespace GeoLocalizationBL
     /// </summary>
     public class GeoQuerys: IGeoQuerys
     {
+
         #region GetLocations
 
         /// <summary>

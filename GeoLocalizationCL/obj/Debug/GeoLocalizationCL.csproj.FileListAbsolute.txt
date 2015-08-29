@@ -8,3 +8,4 @@ E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\log4net.dll
 E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\Newtonsoft.Json.dll
 E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\log4net.xml
 E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\bin\Debug\Newtonsoft.Json.xml
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationCL\obj\Debug\GeoLocalizationCL.csprojResolveAssemblyReference.cache

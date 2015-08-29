@@ -32,7 +32,8 @@ namespace GeoLocalizationDL
         #region getAllLocations
 
         /// <summary>
-        /// 
+        /// General Method to get all the locations. I've created this method to isolate the BL and the DL.
+        /// After several test the best method has been getAllLocationsCacheStreamParallel
         /// </summary>
         /// <returns></returns>
         public List<Location> getAllLocations()
@@ -67,10 +68,15 @@ namespace GeoLocalizationDL
         {
             try
             {
-                if (MemCache == null) MemCache = new MemoryCache("MemCache");
                 List<Location> lLocations = new List<Location>();
+
+                //Check if the list of Locations is already in Cache
+                if (MemCache == null) MemCache = new MemoryCache("MemCache");
+                
+                //If not makes the search
                 if (!MemCache.Contains("ListOfLocations"))
                 {
+                    
                     string dataSource = ConfigurationManager.AppSettings["dataSource"];                   
 
                     switch (dataSource)
