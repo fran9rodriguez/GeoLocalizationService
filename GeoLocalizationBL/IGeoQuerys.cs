@@ -9,6 +9,6 @@ namespace GeoLocalizationBL
 {
     public interface IGeoQuerys: IDisposable
     {
-        List<Location> GetLocations(Location pLocation, int maxDistance, int maxResults);
+        SearchResults GetLocations(Location pLocation, int maxDistance, int maxResults, SearchResults sr);
     }
 }

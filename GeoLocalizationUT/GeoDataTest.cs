@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using GeoLocalizationCL;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace GeoLocalizationUT
 {
@@ -68,49 +69,6 @@ namespace GeoLocalizationUT
 
 
 
-        /// <summary>
-        ///A test for getAllLocations
-        ///</summary>
-        [TestMethod()]
-        public void getAllLocationsTest()
-        {
-            GeoData target = new GeoData(); // TODO: Initialize to an appropriate value
-            string filename = @"E:\Fran\Projects\GeoLocalizationService\GeoLocalizationDL\Data\locations.csv"; // TODO: Initialize to an appropriate value
-            List<Location> expected = null; // TODO: Initialize to an appropriate value
-            List<Location> actual;
-            actual = target.getAllLocations(filename);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for getAllLocations
-        ///</summary>
-        [TestMethod()]
-        public void getAllLocationsTest_MediumSize()
-        {
-            GeoData target = new GeoData(); // TODO: Initialize to an appropriate value
-            string filename = @"E:\Fran\Projects\GeoLocalizationService\GeoLocalizationDL\Data\locationsMedium.csv"; // TODO: Initialize to an appropriate value
-            List<Location> expected = null; // TODO: Initialize to an appropriate value
-            List<Location> actual;
-            actual = target.getAllLocations(filename);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for getAllLocations
-        ///</summary>
-        [TestMethod()]
-        public void getAllLocationsTest_BigSize()
-        {
-            GeoData target = new GeoData(); // TODO: Initialize to an appropriate value
-            string filename = @"E:\Fran\Projects\GeoLocalizationService\GeoLocalizationDL\Data\locationsBig.csv"; // TODO: Initialize to an appropriate value
-            List<Location> expected = null; // TODO: Initialize to an appropriate value
-            List<Location> actual;
-            actual = target.getAllLocations(filename);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
+        
     }
 }

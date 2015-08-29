@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using GeoLocalizationCL;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace GeoLocalizationUT
 {
@@ -66,19 +67,20 @@ namespace GeoLocalizationUT
         #endregion
 
 
+
         /// <summary>
-        ///A test for GetLocations
+        ///A test for GetLocationsAsync
         ///</summary>
         [TestMethod()]
-        public void GetLocationsTest()
+        public void GetLocationsAsyncTest()
         {
             GeoQuerys target = new GeoQuerys(); // TODO: Initialize to an appropriate value
             Location pLocation = new Location("P1", double.Parse("52.2165425"), double.Parse("5.4778534")); // TODO: Initialize to an appropriate value
             int maxDistance = 5000; // Meters
             int maxResults = 100; // 100
-            List<Location> expected = null; // TODO: Initialize to an appropriate value
-            List<Location> actual;
-            actual = target.GetLocations(pLocation, maxDistance, maxResults);
+            Task<List<Location>> expected = null; // TODO: Initialize to an appropriate value
+            Task<List<Location>> actual;
+            actual = target.GetLocationsAsync(pLocation, maxDistance, maxResults);
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }

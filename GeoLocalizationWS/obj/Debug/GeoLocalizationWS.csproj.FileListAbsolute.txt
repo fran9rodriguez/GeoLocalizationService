@@ -14,3 +14,6 @@ E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\log4net.dll
 E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\Newtonsoft.Json.dll
 E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\log4net.xml
 E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\Newtonsoft.Json.xml
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\LinqToExcel.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\Remotion.Data.Linq.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationWS\bin\LinqToExcel.xml

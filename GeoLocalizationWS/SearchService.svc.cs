@@ -37,6 +37,7 @@ namespace GeoLocalizationWS
             {
                 using (SearchResults sr = new SearchResults())
                 {
+                    SearchResults srDetailed = new SearchResults();
                     try
                     {
                         sr.StartSearch(Latitude, Longitude, maxDistance, maxResults);
@@ -45,18 +46,18 @@ namespace GeoLocalizationWS
                             using (IGeoQuerys gq = new GeoQuerys())
                             {
                                 Location location = new Location("P1", double.Parse(Latitude), double.Parse(Longitude));
-                                lLocations = gq.GetLocations(location, Int32.Parse(maxDistance), Int32.Parse(maxResults));
-                                sr.EndSearch(lLocations, "");
+                                srDetailed = gq.GetLocations(location, Int32.Parse(maxDistance), Int32.Parse(maxResults),sr);
+                                srDetailed.EndSearch("");
                             }
                         }
                     }
                     catch (Exception e)
                     {
                         t.Error(e.Message.ToString(), e);
-                        sr.EndSearch(null, e.Message.ToString());
+                        srDetailed.EndSearch(e.Message.ToString());
                     }
 
-                    return sr;
+                    return srDetailed;
                 }
             }
         }

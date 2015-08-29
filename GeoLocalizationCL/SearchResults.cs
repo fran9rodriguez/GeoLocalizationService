@@ -18,13 +18,16 @@ namespace GeoLocalizationCL
     {
         public DateTime ts { get; set; } //start time
         public DateTime te { get; set; } //end time
-        public double Duration { get; set; } //duration of the search
+        public double TotalDuration { get; set; } //duration of the search
+        public double ReadDataDuration { get; set; } //duration of the search
         public string Latitude { get; set; } 
         public string Longitude { get; set; }
         public string Distance { get; set; }
         public string maxResults { get; set; }
         public List<Location> Locations { get; set; }
         public string Error { get; set; }
+        public int FileRecords { get; set; }
+
 
         public SearchResults() { }
 
@@ -49,14 +52,12 @@ namespace GeoLocalizationCL
         /// Method to calculate the duration of the search and store the results
         /// </summary>
         /// <param name="plLocations">Locations</param>
-        public void EndSearch(List<Location> plLocations,string sError)
-        {
-            Locations = plLocations;
+        public void EndSearch(string sError)
+        {            
             te = DateTime.Now;
             TimeSpan t = te - ts;
-            Duration = t.TotalSeconds;
-            Error = sError;
-
+            TotalDuration = t.TotalSeconds;
+            Error = sError;            
         }
 
         #region IDisposable

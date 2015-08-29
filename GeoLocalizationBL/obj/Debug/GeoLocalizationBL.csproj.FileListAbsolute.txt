@@ -9,3 +9,6 @@ E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\GeoLocalizat
 E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\GeoLocalizationCL.pdb
 E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\log4net.dll
 E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\log4net.xml
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\LinqToExcel.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\Remotion.Data.Linq.dll
+E:\Fran\Projects\GeoLocalizationService\GeoLocalizationBL\bin\Debug\LinqToExcel.xml
