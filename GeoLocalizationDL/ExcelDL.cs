@@ -22,7 +22,7 @@ namespace GeoLocalizationDL
 {
 
     /// <summary>
-    /// 
+    /// Class to implement the methods to connect with a Excel Source of data
     /// </summary>
     public class ExcelDL:IDataSource
     {
@@ -89,9 +89,9 @@ namespace GeoLocalizationDL
 
                 return lLocations;
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
 
         }
@@ -136,9 +136,9 @@ namespace GeoLocalizationDL
 
                 return lLocations;
             }
-            catch
+            catch(Exception ex)
             {
-                throw;
+                throw ex;
             }
 
         }
@@ -147,26 +147,33 @@ namespace GeoLocalizationDL
 
         #region GetLocationsLinqToExcel
 
-        public List<Location> GetLocationsLinqToExcel()
+        /// <summary>
+        /// MEthod to extrac the Location using LinqToExcel
+        /// </summary>
+        /// <param name="pathToExcelFile"></param>
+        /// <returns></returns>
+        public List<Location> GetLocationsLinqToExcel(string pathToExcelFile)
         {
-            string pathToExcelFile = ConfigurationManager.AppSettings["fileLocations"];
+            try
+            {
+                string sheetName = "locations";
 
-            string sheetName = "locations";
+                var excelFile = new ExcelQueryFactory(pathToExcelFile);
 
-            var excelFile = new ExcelQueryFactory(pathToExcelFile);
-            //excelFile.AddMapping("Name", "Address");
-            //excelFile.AddMapping("Latitude", "Latitude");
-            //excelFile.AddMapping("Longitude", "Longitude");
+                var qLocations = from location in excelFile.Worksheet(sheetName)
+                                 select new Location
+                                 {
+                                     Name = location["Address"],
+                                     Latitude = double.Parse(location["Latitude"]),
+                                     Longitude = double.Parse(location["Longitude"])
+                                 };
 
-            var qLocations = from location in excelFile.Worksheet(sheetName)                             
-                             select new Location
-                             {
-                                 Name = location["Address"],
-                                 Latitude = double.Parse(location["Latitude"]),
-                                 Longitude = double.Parse(location["Longitude"])
-                             };
-
-            return qLocations.ToList();
+                return qLocations.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
             
         }
@@ -176,30 +183,36 @@ namespace GeoLocalizationDL
         #region GetLocationsOldbConnection
 
         /// <summary>
-        /// 
+        /// MEthod to get the Locations using OldbConnection
         /// </summary>
         /// <returns></returns>
         public DataView GetLocationsOldbConnection()
         {
+            try
+            {
+                string pathToExcelFile = ConfigurationManager.AppSettings["fileLocations"];
+                string sheetName = "locations";
 
-            string pathToExcelFile = ConfigurationManager.AppSettings["fileLocations"];
-            string sheetName = "locations";
+                OleDbConnection con = new OleDbConnection(
+                        "provider=Microsoft.Jet.OLEDB.4.0;data source="
+                        + pathToExcelFile
+                        + ";Extended Properties=Excel 8.0;");
 
-            OleDbConnection con = new OleDbConnection(
-                    "provider=Microsoft.Jet.OLEDB.4.0;data source="
-                    + pathToExcelFile
-                    + ";Extended Properties=Excel 8.0;");
+                StringBuilder stbQuery = new StringBuilder();
+                stbQuery.Append("SELECT * FROM [" + sheetName + "$A1:C1]");
+                OleDbDataAdapter adp = new OleDbDataAdapter(stbQuery.ToString(), con);
 
-            StringBuilder stbQuery = new StringBuilder();
-            stbQuery.Append("SELECT * FROM [" + sheetName + "$A1:C1]");
-            OleDbDataAdapter adp = new OleDbDataAdapter(stbQuery.ToString(), con);
+                DataSet dsXLS = new DataSet();
+                adp.Fill(dsXLS);
 
-            DataSet dsXLS = new DataSet();
-            adp.Fill(dsXLS);
+                DataView dvEmp = new DataView(dsXLS.Tables[0]);
 
-            DataView dvEmp = new DataView(dsXLS.Tables[0]);
-
-            return dvEmp;
+                return dvEmp;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         #endregion

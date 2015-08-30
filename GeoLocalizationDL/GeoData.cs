@@ -269,7 +269,7 @@ namespace GeoLocalizationDL
             args.UpdatedCacheItemPolicy = policy;
         }       
 
-        #endregion
+        #endregion        
 
         #region IDisposable
 

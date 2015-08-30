@@ -66,96 +66,36 @@ namespace GeoLocalizationUT
         //}
         //
         #endregion
-
-
-        /// <summary>
-        ///A test for GetLocations
-        ///</summary>
-        [TestMethod()]
-        public void GetLocationsTest()
-        {
-            ExcelDL target = new ExcelDL(); // TODO: Initialize to an appropriate value
-            List<Location> expected = null; // TODO: Initialize to an appropriate value
-            List<Location> actual;
-            actual = target.GetLocationsLinqToExcel();
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for GetLocationsOldbConnection
-        ///</summary>
-        [TestMethod()]
-        public void GetLocationsOldbConnectionTest()
-        {
-            ExcelDL target = new ExcelDL(); // TODO: Initialize to an appropriate value
-            DataView expected = null; // TODO: Initialize to an appropriate value
-            DataView actual;
-            actual = target.GetLocationsOldbConnection();
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
+               
 
         /// <summary>
         ///A test for getAllLocations
         ///</summary>
         [TestMethod()]
-        public void getAllLocationsTest()
-        {
-            ExcelDL target = new ExcelDL(); // TODO: Initialize to an appropriate value
-            string filename = @"E:\Fran\Projects\GeoLocalizationService\GeoLocalizationDL\Data\locations.csv"; // TODO: Initialize to an appropriate value
-            List<Location> expected = null; // TODO: Initialize to an appropriate value
-            List<Location> actual;
-            actual = target.getAllLocationsFileReaderLinq(filename);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for getAllLocations
-        ///</summary>
-        [TestMethod()]
-        public void getAllLocationsTest_MediumSize()
-        {
-            ExcelDL target = new ExcelDL(); // TODO: Initialize to an appropriate value
-            string filename = @"E:\Fran\Projects\GeoLocalizationService\GeoLocalizationDL\Data\locationsMedium.csv"; // TODO: Initialize to an appropriate value
-            List<Location> expected = null; // TODO: Initialize to an appropriate value
-            List<Location> actual;
-            actual = target.getAllLocationsFileReaderLinq(filename);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for getAllLocations
-        ///</summary>
-        [TestMethod()]
-        public void getAllLocationsTest_BigSize()
+        public void getAllLocationsFileReaderLinq()
         {
             ExcelDL target = new ExcelDL(); // TODO: Initialize to an appropriate value
             string filename = @"E:\Fran\Projects\GeoLocalizationService\GeoLocalizationDL\Data\locationsBig.csv"; // TODO: Initialize to an appropriate value
-            List<Location> expected = null; // TODO: Initialize to an appropriate value
+            int nRows = 1013351;
             List<Location> actual;
             actual = target.getAllLocationsFileReaderLinq(filename);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual(nRows, actual.Count);            
         }
 
+
         /// <summary>
-        ///A test for geLocationsByRange
+        ///A test for getAllLocationsParallel
         ///</summary>
         [TestMethod()]
-        public void geLocationsByRangeTest()
+        public void getAllLocationsStreamTest()
         {
             ExcelDL target = new ExcelDL(); // TODO: Initialize to an appropriate value
             string filename = @"E:\Fran\Projects\GeoLocalizationService\GeoLocalizationDL\Data\locationsBig.csv";
-            int index = 0; // TODO: Initialize to an appropriate value
-            int offset = 100000; // TODO: Initialize to an appropriate value
-            Task<List<Location>> expected = null; // TODO: Initialize to an appropriate value
-            Task<List<Location>> actual;
-            actual = target.geLocationsByRange(filename, index, offset);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            int nRows = 1013352;
+            List<Location> actual;
+            actual = target.getAllLocationsStream(filename);
+            Assert.AreEqual(nRows, actual.Count);
+            
         }
 
         /// <summary>
@@ -166,11 +106,11 @@ namespace GeoLocalizationUT
         {
             ExcelDL target = new ExcelDL(); // TODO: Initialize to an appropriate value
             string filename = @"E:\Fran\Projects\GeoLocalizationService\GeoLocalizationDL\Data\locationsBig.csv";
-            List<Location> expected = null; // TODO: Initialize to an appropriate value
+            int nRows = 1013352;
             List<Location> actual;
             actual = target.getAllLocationsStreamParallel(filename);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual(nRows, actual.Count);            
         }
+       
     }
 }

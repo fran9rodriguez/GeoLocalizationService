@@ -75,7 +75,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ExcelDLTest.cs" />
-    <Compile Include="GeoDataTest.cs" />
     <Compile Include="GeoQuerysTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

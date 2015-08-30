@@ -66,23 +66,24 @@ namespace GeoLocalizationUT
         //
         #endregion
 
-
-
         /// <summary>
-        ///A test for GetLocationsAsync
+        ///A test for GetLocations
         ///</summary>
         [TestMethod()]
-        public void GetLocationsAsyncTest()
+        public void GetLocationsTest()
         {
             GeoQuerys target = new GeoQuerys(); // TODO: Initialize to an appropriate value
             Location pLocation = new Location("P1", double.Parse("52.2165425"), double.Parse("5.4778534")); // TODO: Initialize to an appropriate value
-            int maxDistance = 5000; // Meters
-            int maxResults = 100; // 100
-            Task<List<Location>> expected = null; // TODO: Initialize to an appropriate value
-            Task<List<Location>> actual;
-            actual = target.GetLocationsAsync(pLocation, maxDistance, maxResults);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            int maxDistance = 10000; // TODO: Initialize to an appropriate value
+            int maxResults = 100; // TODO: Initialize to an appropriate value
+            SearchResults sr = new SearchResults();            
+            SearchResults actual;
+
+            sr.StartSearch("52.2165425", "5.4778534", maxDistance.ToString(), maxResults.ToString());
+            actual = target.GetLocations(pLocation, maxDistance, maxResults, sr);
+            actual.EndSearch("");
+
+            Assert.AreEqual(maxResults.ToString(), actual.maxResults);            
         }
     }
 }
