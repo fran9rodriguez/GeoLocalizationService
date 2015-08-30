@@ -42,7 +42,9 @@ namespace GeoLocalizationBL
                 using (GeoData gData = new GeoData())
                 {
                     DateTime t1 = DateTime.UtcNow;
+
                     lLocations = gData.getAllLocations();
+                    
                     DateTime t2 = DateTime.UtcNow;
                     TimeSpan t = t2 - t1;
                     double d = t.TotalSeconds;

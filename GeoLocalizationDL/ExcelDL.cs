@@ -101,7 +101,7 @@ namespace GeoLocalizationDL
         #region getAllLocationsStreamParallel
 
         /// <summary>
-        /// 
+        /// Method to get the Location using File.ReadAllLines and ParallelFor
         /// </summary>
         /// <param name="filename"></param>
         /// <returns></returns>
