@@ -53,10 +53,11 @@ namespace GeoLocalizationBL
                 }
 
                 //Sort by Distance
-                List<Location> SortedList = lLocations.OrderBy(o => o.CalculateDistance(pLocation)).ToList();
+                //Added Parallelism
+                List<Location> SortedList = lLocations.AsParallel().WithDegreeOfParallelism(4).OrderBy(o => o.CalculateDistance(pLocation)).ToList();
 
                 //Filter the Locations with the same Distance, Longitude and Latitude
-                List<Location> filterRepeated = SortedList.GroupBy(x => new { x.Distance, x.Longitude, x.Latitude })
+                List<Location> filterRepeated = SortedList.AsParallel().WithDegreeOfParallelism(4).GroupBy(x => new { x.Distance, x.Longitude, x.Latitude })
                                                    .Select(g => g.First())
                                                    .ToList();
 

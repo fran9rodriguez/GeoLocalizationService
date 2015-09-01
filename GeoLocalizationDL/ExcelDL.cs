@@ -112,7 +112,7 @@ namespace GeoLocalizationDL
                 List<Location> lLocations = new List<Location>();
                 string[] AllLines = File.ReadAllLines(filename);
 
-                var options = new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount * 10 };
+                var options = new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount * 4 };
 
                 Parallel.For(0, AllLines.Length, options, i =>
                 {

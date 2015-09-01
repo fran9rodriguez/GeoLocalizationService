@@ -7,6 +7,7 @@ using System.ServiceModel.Web;
 using System.Text;
 using GeoLocalizationBL;
 using GeoLocalizationCL;
+using System.Threading.Tasks;
 
 namespace GeoLocalizationWS
 {
@@ -75,9 +76,6 @@ namespace GeoLocalizationWS
                 }
             }
         }
-
-
-
        
     }
 }
